@@ -1,4 +1,14 @@
 {
+  "name": "tjthecalculator.github.io",
+  "version": "1.0.0",
+  "description": "My personal website and portfolio",
+  "main": "./src/main.js",
+  "scripts": {
+    "build": "react-scripts build",
+    "start": "react-scripts start",
+    "test": "react-scripts test",
+    "eject": "react-scripts eject"
+  },
   "dependencies": {
     "@tailwindcss/cli": "^4.1.6",
     "react": "^19.1.0",
