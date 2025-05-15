@@ -2,7 +2,6 @@
   "name": "tjthecalculator.github.io",
   "version": "1.0.0",
   "description": "My personal website and portfolio",
-  "main": "./src/main.js",
   "homepage": "https://tjthecalculator.github.io/",
   "author": "Tawatchai Jitporn",
   "scripts": {

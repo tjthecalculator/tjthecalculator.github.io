@@ -7,7 +7,7 @@ import Experience from "./pages/Experience/Experience";
 import Layout from "./components/Layout";
 import { Routes, Route, useLocation } from "react-router-dom";
 
-const Router = () => {
+const RouterApp = () => {
 
     const location = useLocation();
 
@@ -33,4 +33,4 @@ const Router = () => {
     );
 };
 
-export default Router;
+export default RouterApp;

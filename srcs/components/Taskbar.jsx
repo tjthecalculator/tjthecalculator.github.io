@@ -6,7 +6,7 @@ const Taskbar = () => {
         <nav className="taskbar">
             <ul>
                 <li>
-                    <Link to="/home">Home</Link>
+                    <Link to="/">Home</Link>
                 </li>
                 <li>
                     <Link to="/skills">Skills</Link>
@@ -15,10 +15,10 @@ const Taskbar = () => {
                     <Link to="/education">Education</Link>
                 </li>
                 <li>
-                    <Link to="/experience">Experience</Link>
+                    <Link to="/projects">Projects</Link>
                 </li>
                 <li>
-                    <Link to="/projects">Projects</Link>
+                    <Link to="/experience">Experience</Link>
                 </li>
             </ul>
         </nav>
