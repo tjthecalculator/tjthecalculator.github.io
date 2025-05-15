@@ -4,6 +4,7 @@ import Education from "./pages/Education/Education";
 import Projects from "./pages/Projects/Projects";
 import Skills from "./pages/Skills/Skills";
 import Experience from "./pages/Experience/Experience";
+import Layout from "./components/Layout";
 import { Routes, Route, useLocation } from "react-router-dom";
 
 const Router = () => {
@@ -26,7 +27,7 @@ const Router = () => {
     return (
         <Routes>
             {pages.map(({ path, component: Component }) => (
-                <Route key={path} path={path} element={<Component />} />
+                <Route key={path} path={path} element={<Layout><Component /></Layout>} />
             ))}
         </Routes>
     );
