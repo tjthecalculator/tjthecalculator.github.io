@@ -4,4 +4,6 @@ const Footer = () => {
             <p>© 2025 Tawatchai Jitporn. All rights reserved.</p>
         </footer>
     );
-}
+};
+
+export default Footer;
