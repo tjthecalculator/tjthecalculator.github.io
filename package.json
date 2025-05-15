@@ -3,11 +3,11 @@
   "version": "1.0.0",
   "description": "My personal website and portfolio",
   "main": "./src/main.js",
+  "homepage": "https://tjthecalculator.github.io/tjthecalculator.github.io",
+  "author": "Tawatchai Jitporn",
   "scripts": {
-    "build": "react-scripts build",
-    "start": "react-scripts start",
-    "test": "react-scripts test",
-    "eject": "react-scripts eject"
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d build"
   },
   "dependencies": {
     "@tailwindcss/cli": "^4.1.6",
@@ -15,5 +15,8 @@
     "react-dom": "^19.1.0",
     "react-router-dom": "^7.6.0",
     "tailwindcss": "^4.1.6"
+  },
+  "devDependencies": {
+    "gh-pages": "^6.3.0"
   }
 }
