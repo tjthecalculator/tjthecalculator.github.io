@@ -2,16 +2,17 @@
   "name": "tjthecalculator.github.io",
   "version": "1.0.0",
   "description": "Personal website for TJ the Calculator",
-  "main": "./src/main.jsx",
   "author": "Tawatchai Jitporn",
+  "license": "MIT",
+  "type": "module",
   "scripts": {
     "build": "vite build",
     "dev": "vite",
     "predeploy": "npm run build",
-    "deploy": "gh-pages -d dist --branch gh-pages --message 'Deploying to GitHub Pages'"
+    "deploy": "gh-pages -d dist -b gh-pages"
   },
   "dependencies": {
-    "@tailwindcss/cli": "^4.1.6",
+    "@tailwindcss/vite": "^4.1.7",
     "react": "^19.1.0",
     "react-dom": "^19.1.0",
     "react-router-dom": "^7.6.0",
