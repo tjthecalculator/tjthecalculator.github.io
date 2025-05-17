@@ -1,7 +1,7 @@
 export const Footer = () => {
     return (
         <div>
-            <p></p>
+            <p>&copy; 2025 Tawatchai Jitporn</p>
         </div>
     );
 };

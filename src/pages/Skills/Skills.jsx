@@ -3,7 +3,7 @@ import { SoftSkills, TechnicalSkills } from "./components";
 export const Skills = () => {
     return (
         <div>
-            <h1>Skills</h1>
+            <h2>Skills</h2>
             <p>Here are my skills.</p>
             <div className="skills">
                 <h2>Technical Skills</h2>

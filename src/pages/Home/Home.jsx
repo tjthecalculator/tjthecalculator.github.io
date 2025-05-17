@@ -1,8 +1,10 @@
+import { ProfessionalSummary } from "./components/ProfessionalSummary";
+
 export const Home = () => {
     return (
         <div>
-            <h1>Home</h1>
-            <p>Welcome to the home page!</p>
+            <h2>Home</h2>
+            <ProfessionalSummary />
         </div>
     );
 };

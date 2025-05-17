@@ -1,7 +1,8 @@
 import { Route, Routes, useLocation } from "react-router-dom";
-import { Home, Skills, Educations, Projects, Experiences } from "@/pages";
-import { Header, Footer } from "@/components/Layouts";
+import { Home, Skills, Educations, Projects, Experiences, Contacts } from "@/pages";
+import { Layout } from "@/components/common";
 import { useEffect } from "react";
+import { title } from "process";
 
 const Router = () => {
 
@@ -13,6 +14,7 @@ const Router = () => {
         {path: "/educations", title: "Educations", component: <Educations />},
         {path: "/projects", title: "Projects", component: <Projects />},
         {path: "/experiences", title: "Experiences", component: <Experiences />},
+        {path: "/contacts", title: "Contacts", component: <Contacts />},
     ];
 
     useEffect(() => {
@@ -23,7 +25,7 @@ const Router = () => {
     return (
         <Routes>
             {pages.map(({ path, component: Component }) => (
-                <Route key={path} path={path} element={<><Component /></>} />
+                <Route key={path} path={path} element={<Layout children={ Component }/>} />
             ))}
         </Routes>
     );
