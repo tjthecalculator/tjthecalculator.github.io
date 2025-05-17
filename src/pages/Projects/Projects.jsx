@@ -1,3 +1,4 @@
+import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 import { ProjectCards } from "./components";
 
 export const Projects = () => {
@@ -30,8 +31,18 @@ export const Projects = () => {
         <div>
             <h2>Projects</h2>
             <p>Here are some of my projects.</p>
-                {finishedProjects.map((content) => (<ProjectCards content={ content }/>))}
-                {ongoingProjects.map((content) => (<ProjectCards content={ content }/>))}
+            <Tabs>
+                <TabsList>
+                    <TabsTrigger value="finishedProjects">Finished Projects</TabsTrigger>
+                    <TabsTrigger value="ongoingProjects">Ongoing Projects</TabsTrigger>
+                </TabsList>
+                <TabsContent value="finishedProjects">
+                    {finishedProjects.map((content) => (<ProjectCards content={ content }/>))}
+                </TabsContent>
+                <TabsContent value="ongoingProjects">
+                    {ongoingProjects.map((content) => (<ProjectCards content={ content }/>))}
+                </TabsContent>
+            </Tabs>
         </div>
     );
 };
