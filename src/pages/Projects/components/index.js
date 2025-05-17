@@ -1,2 +1,1 @@
-export * from "./FinishedProjects";
-export * from "./OngoingProjects";
+export * from "./ProjectCards";

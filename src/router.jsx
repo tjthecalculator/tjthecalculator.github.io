@@ -2,7 +2,6 @@ import { Route, Routes, useLocation } from "react-router-dom";
 import { Home, Skills, Educations, Projects, Experiences, Contacts } from "@/pages";
 import { Layout } from "@/components/common";
 import { useEffect } from "react";
-import { title } from "process";
 
 const Router = () => {
 
