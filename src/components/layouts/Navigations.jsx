@@ -16,24 +16,13 @@ export const Navigations = () => {
         <NavigationMenu>
             <NavigationMenuList>
                 <NavigationMenuItem>
-                    <NavLink to="/">
-                        <NavigationMenuList className={ navigationMenuTriggerStyle() }>Home</NavigationMenuList>
-                    </NavLink>
-                    <NavLink to="/skills">
-                        <NavigationMenuList className={ navigationMenuTriggerStyle() }>Skills</NavigationMenuList>
-                    </NavLink>
-                    <NavLink to="/educations">
-                        <NavigationMenuList className={ navigationMenuTriggerStyle() }>Educations</NavigationMenuList>
-                    </NavLink>
-                    <NavLink to="/projects">
-                        <NavigationMenuList className={ navigationMenuTriggerStyle() }>Projects</NavigationMenuList>
-                    </NavLink>
-                    <NavLink to="/experiences">
-                        <NavigationMenuList className={ navigationMenuTriggerStyle() }>Experiences</NavigationMenuList>
-                    </NavLink>
-                    <NavLink to="/contacts">
-                        <NavigationMenuList className={ navigationMenuTriggerStyle() }>Contacts</NavigationMenuList>
-                    </NavLink>
+                    {navigations.map(list =>
+                        <NavLink to={list.path}>
+                            <NavigationMenuList className={ navigationMenuTriggerStyle() }>
+                                { list.title }
+                            </NavigationMenuList>
+                        </NavLink>
+                    )}
                 </NavigationMenuItem>
             </NavigationMenuList>
         </NavigationMenu>
