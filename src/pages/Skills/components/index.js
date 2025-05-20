@@ -1,2 +1,3 @@
-export * from "./SoftSkills";
-export * from "./TechnicalSkills";
+export * from "./TechnicalSkillCards";
+export * from "./SoftSkillCards";
+

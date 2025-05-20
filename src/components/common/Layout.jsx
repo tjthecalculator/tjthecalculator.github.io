@@ -1,11 +1,10 @@
-import { Header, Footer } from "../layouts";
-import { Navigation } from "../ui";
+import { Header, Footer, Navigations } from "../layouts";
 
 export const Layout = ({ children }) => {
     return (
         <div>
             <Header />
-            <Navigation />
+            <Navigations />
             <main>{children}</main>
             <Footer />
         </div>

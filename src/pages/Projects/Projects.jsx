@@ -5,25 +5,25 @@ export const Projects = () => {
 
     const ongoingProjects = [
         {
-            projectTile: "Reaction Transformer",
+            projectTitle: "Reaction Transformer",
             projectDescription: "Building Chemical Reaction Transformation from Reactant to Product with Transformer Model",
-            projectLanguage: "Python",
-            projectTools: "Tensorflow, RDKit",
-        },
+            projectLanguage: ["Python"],
+            projectTools: ["Tensorflow", "RDKit"],
+        }
     ];
 
     const finishedProjects = [
         {
             projectTitle: "QSAR",
             projectDescription: "Building Multiple Linear Regression with Partial Least Square for Quantitaty Structure-Activity Relationship.",
-            projectLanguage: "Python",
-            projectTools: "Scikit-Learn",
+            projectLanguage: ["Python"],
+            projectTools: ["Scikit-Learn"],
         },
         {
-            projectTile: "Pickled-Cat",
+            projectTitle: "Pickled-Cat",
             projectDescription: "Building Full-Stack E-Commerces Website",
-            projectLanguage: "HTML, CSS, JavaScript",
-            projectTools: "React, Express.js, Node.js, MongoDB",
+            projectLanguage: ["HTML", "CSS", "JavaScript"],
+            projectTools: ["React", "Express.js", "Node.js", "MongoDB"],
         }
     ];
 
@@ -31,7 +31,7 @@ export const Projects = () => {
         <div>
             <h2>Projects</h2>
             <p>Here are some of my projects.</p>
-            <Tabs>
+            <Tabs defaultValue="finishedProjects">
                 <TabsList>
                     <TabsTrigger value="finishedProjects">Finished Projects</TabsTrigger>
                     <TabsTrigger value="ongoingProjects">Ongoing Projects</TabsTrigger>

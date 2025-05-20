@@ -1,4 +1,9 @@
+import { ExperienceCard } from "./components";
+
 export const Experiences = () => {
+
+    const experience = [];
+
     return (
         <div className="experiences">
             <h2>Experiences</h2>

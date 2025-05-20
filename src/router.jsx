@@ -8,12 +8,12 @@ const Router = () => {
     const location = useLocation();
 
     const pages = [
-        {path: "/", title: "TJ the Calculator", component: <Home />},
-        {path: "/skills", title: "Skills", component: <Skills />},
-        {path: "/educations", title: "Educations", component: <Educations />},
-        {path: "/projects", title: "Projects", component: <Projects />},
-        {path: "/experiences", title: "Experiences", component: <Experiences />},
-        {path: "/contacts", title: "Contacts", component: <Contacts />},
+        {path: "/", title: "TJ the Calculator - Home", component: <Home />},
+        {path: "/skills", title: "TJ the Calculator - Skills", component: <Skills />},
+        {path: "/educations", title: "TJ the Calculator - Educations", component: <Educations />},
+        {path: "/projects", title: "TJ the Calculator - Projects", component: <Projects />},
+        {path: "/experiences", title: "TJ the Calculator - Experiences", component: <Experiences />},
+        {path: "/contacts", title: "TJ the Calculator - Contacts", component: <Contacts />},
     ];
 
     useEffect(() => {

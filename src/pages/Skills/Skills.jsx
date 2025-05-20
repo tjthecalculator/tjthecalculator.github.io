@@ -1,4 +1,5 @@
-import { SoftSkills, TechnicalSkills } from "./components";
+import { SoftSkillCards, TechnicalSkillCards } from "./components";
+import { Tabs, TabsList, TabsTrigger, TabsContent } from "@/components/ui/tabs";
 
 export const Skills = () => {
 
@@ -6,65 +7,67 @@ export const Skills = () => {
         {
             programingLanguage: "Python",
             tools: ["Scikit-Learn", "Pandas", "Tensorflow", "RDKit", "Flask"],
-            experiences: 5,
+            experiences: "5",
         },
         {
             programingLanguage: "JavaScript",
             tools: ["React", "Node.js", "Express.js"],
-            experiences: 1,
+            experiences: "1",
         },
         {
             programingLanguage: "Java",
-            tools: [],
-            experiences: 1,
+            tools: ["None"],
+            experiences: "1",
         },
         {
             programingLanguage: "Julia",
-            tools: [],
-            experiences: 1,
+            tools: ["None"],
+            experiences: "1",
         },
         {
             programingLanguage: "C#",
-            tools: [],
-            experiences: 1,
+            tools: ["None"],
+            experiences: "1",
         },
         {
             programingLanguage: "ForTran",
-            tools: [],
-            experiences: 1,
+            tools: ["None"],
+            experiences: "1",
         },
         {
             programingLanguage: "GO (Golang)",
-            tools: [],
-            experiences: 1,
-        },
+            tools: ["None"],
+            experiences: "1",
+        }
     ];
 
     const softSkills = [
         {
-            skillName: "",
-            skillDescription: "",
+            skillName: "Growth Mindset",
         },
         {
             skillName: "Lifelong Learner",
-            skillDescription: "",
         },
         {
             skillName: "Orientation to Details",
-            skillDescription: "",
-        },
+        }
     ];
 
     return (
         <div>
             <h2>Skills</h2>
-            <p>Here are my skills.</p>
-            <div className="skills">
-                <h2>Technical Skills</h2>
-                <TechnicalSkills />
-                <h2>Soft Skills</h2>
-                <SoftSkills />
-            </div>
+            <Tabs defaultValue="technicalSkills">
+                <TabsList>
+                    <TabsTrigger value="technicalSkills">Technical Skills</TabsTrigger>
+                    <TabsTrigger value="softSkills">Soft Skills</TabsTrigger>
+                </TabsList>
+                <TabsContent>
+                    {technicalSkills.map((content) => (<TechnicalSkillCards content={ content }/>))}
+                </TabsContent>
+                <TabsContent>
+                    {softSkills.map((content) => (<SoftSkillCards content={ content }/>))}
+                </TabsContent>
+            </Tabs>
         </div>
     );
 };
