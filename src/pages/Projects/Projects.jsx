@@ -1,5 +1,6 @@
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 import { ProjectCards } from "./components";
+import { Carousel, CarouselContent, CarouselItem, CarouselNext, CarouselPrevious } from "@/components/ui/carousel";
 
 export const Projects = () => {
 
@@ -37,10 +38,22 @@ export const Projects = () => {
                     <TabsTrigger value="ongoingProjects">Ongoing Projects</TabsTrigger>
                 </TabsList>
                 <TabsContent value="finishedProjects">
-                    {finishedProjects.map((content) => (<ProjectCards content={ content }/>))}
+                    <Carousel>
+                        <CarouselContent>
+                            {finishedProjects.map(list => <CarouselItem><ProjectCards content={ list }/></CarouselItem>)}
+                        </CarouselContent>
+                        <CarouselPrevious />
+                        <CarouselNext />
+                    </Carousel>
                 </TabsContent>
                 <TabsContent value="ongoingProjects">
-                    {ongoingProjects.map((content) => (<ProjectCards content={ content }/>))}
+                    <Carousel>
+                        <CarouselContent>
+                            {ongoingProjects.map(list => <CarouselItem><ProjectCards content={ list }/></CarouselItem>)}
+                        </CarouselContent>
+                        <CarouselPrevious />
+                        <CarouselNext />
+                    </Carousel>
                 </TabsContent>
             </Tabs>
         </div>

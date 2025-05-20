@@ -1,22 +1,21 @@
 import { Card, CardHeader, CardTitle, CardDescription, CardContent } from "@/components/ui/card";
+import { Badge } from "@/components/ui/badge";
 
 export const ProjectCards = ({ content }) => {
+
+    const { title, description, languages, toolsAndFrameworks } = content;
 
     return (
         <Card>
             <CardHeader>
-                <CardTitle>{ content.title }</CardTitle>
-                <CardDescription>{ content.description }</CardDescription>
+                <CardTitle>{ title }</CardTitle>
+                <CardDescription>{ description }</CardDescription>
             </CardHeader>
             <CardContent>
                 <h3>Project Language</h3>
-                <ul>
-                    { content.languages.map(components => { return <li>{ components }</li> }) }
-                </ul>
+                { languages.map(list => <Badge>{ list }</Badge>) }
                 <h3>Project Tools and/or Frameworks</h3>
-                <ul>
-                    { content.toolsAndFrameworks.map(components => { return <li>{ components }</li> }) }
-                </ul>
+                { toolsAndFrameworks.map(list => <Badge>{ list }</Badge>) }
             </CardContent>
         </Card>
     );

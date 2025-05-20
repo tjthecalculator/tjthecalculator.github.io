@@ -1,5 +1,6 @@
 import { SoftSkillCards, TechnicalSkillCards } from "./components";
 import { Tabs, TabsList, TabsTrigger, TabsContent } from "@/components/ui/tabs";
+import { Carousel, CarouselContent, CarouselItem, CarouselNext, CarouselPrevious } from "@/components/ui/carousel";
 
 export const Skills = () => {
 
@@ -62,10 +63,22 @@ export const Skills = () => {
                     <TabsTrigger value="softSkills">Soft Skills</TabsTrigger>
                 </TabsList>
                 <TabsContent value="technicalSkills">
-                    {technicalSkills.map((content) => (<TechnicalSkillCards content={ content }/>))}
+                    <Carousel>
+                        <CarouselContent>
+                            {technicalSkills.map(list => <CarouselItem><TechnicalSkillCards content={ list }/></CarouselItem>)}
+                        </CarouselContent>
+                        <CarouselPrevious />
+                        <CarouselNext />
+                    </Carousel>
                 </TabsContent>
                 <TabsContent value="softSkills">
-                    {softSkills.map((content) => (<SoftSkillCards content={ content }/>))}
+                    <Carousel>
+                        <CarouselContent>
+                            {softSkills.map(list => <CarouselItem><SoftSkillCards content={ list }/></CarouselItem>)}
+                        </CarouselContent>
+                        <CarouselPrevious />
+                        <CarouselNext />
+                    </Carousel>
                 </TabsContent>
             </Tabs>
         </div>

@@ -1,5 +1,6 @@
 import { DegreeCard, CertificationCard } from "./components"
 import { Tabs, TabsList, TabsTrigger, TabsContent } from "@/components/ui/tabs";
+import { Carousel, CarouselContent, CarouselItem, CarouselNext, CarouselPrevious } from "@/components/ui/carousel";
 
 export const Educations = () => {
 
@@ -24,11 +25,10 @@ export const Educations = () => {
 
     const certification = [
         {
-            bootcampName: "",
-            bootcampSchool: "",
+            certificationName: "",
+            school: "",
             year: "",
-            bootcampDetails: "",
-            project: "",
+            courseDetails: ""
         }
     ];
 
@@ -41,10 +41,22 @@ export const Educations = () => {
                     <TabsTrigger value="bootcamps">Certifications</TabsTrigger>
                 </TabsList>
                 <TabsContent value="degrees">
-                    {degree.map((content) => (<DegreeCard content={ content }/>))}
+                    <Carousel>
+                        <CarouselContent>
+                            {degree.map(content => <CarouselItem><DegreeCard content={ content }/></CarouselItem>)}
+                        </CarouselContent>
+                        <CarouselPrevious />
+                        <CarouselNext />
+                    </Carousel>
                 </TabsContent>
                 <TabsContent value="bootcamps">
-                    {certification.map((content) => (<CertificationCard content={ content }/>))}
+                    <Carousel>
+                        <CarouselContent>
+                            {certification.map(content => <CarouselItem><CertificationCard content={ content }/></CarouselItem>)}
+                        </CarouselContent>
+                        <CarouselPrevious />
+                        <CarouselNext />
+                    </Carousel>
                 </TabsContent>
             </Tabs>
         </div>
