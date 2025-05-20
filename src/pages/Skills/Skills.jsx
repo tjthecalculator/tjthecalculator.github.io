@@ -61,10 +61,10 @@ export const Skills = () => {
                     <TabsTrigger value="technicalSkills">Technical Skills</TabsTrigger>
                     <TabsTrigger value="softSkills">Soft Skills</TabsTrigger>
                 </TabsList>
-                <TabsContent>
+                <TabsContent value="technicalSkills">
                     {technicalSkills.map((content) => (<TechnicalSkillCards content={ content }/>))}
                 </TabsContent>
-                <TabsContent>
+                <TabsContent value="softSkills">
                     {softSkills.map((content) => (<SoftSkillCards content={ content }/>))}
                 </TabsContent>
             </Tabs>

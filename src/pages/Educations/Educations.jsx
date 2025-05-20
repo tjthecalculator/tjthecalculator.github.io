@@ -16,7 +16,7 @@ export const Educations = () => {
             degreeName: "Bachelor Degree",
             field: "Chemistry",
             university: "Chulalongkorn University",
-            year: "2013 - 2016",
+            year: "2013 - 2017",
             extraCourses: "",
             project: "Calculating Chemical Reaction Pathway with Computational Chemistry Software",
         },
@@ -24,11 +24,11 @@ export const Educations = () => {
 
     const bootcamp = [
         {
-            bootcampName: "Junior Software Developer",
-            bootcampSchool: "Generation Thailand",
-            year: "2015",
-            bootcampDetails: "Software Development with MERN stack",
-            project: "E-Commerces webapp",
+            bootcampName: "",
+            bootcampSchool: "",
+            year: "",
+            bootcampDetails: "",
+            project: "",
         }
     ];
 

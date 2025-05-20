@@ -5,17 +5,17 @@ export const ProjectCards = ({ content }) => {
     return (
         <Card>
             <CardHeader>
-                <CardTitle>{ content.projectTitle }</CardTitle>
-                <CardDescription>{ content.projectDescription }</CardDescription>
+                <CardTitle>{ content.title }</CardTitle>
+                <CardDescription>{ content.description }</CardDescription>
             </CardHeader>
             <CardContent>
                 <h3>Project Language</h3>
                 <ul>
-                    { content.projectLanguage.map((components, index) => (<li key={ index }>{ components }</li>)) }
+                    { content.languages.map(components => { return <li>{ components }</li> }) }
                 </ul>
-                <h3>Project Tools</h3>
+                <h3>Project Tools and/or Frameworks</h3>
                 <ul>
-                    { content.projectTools.map((components, index) => (<li key={ index }>{ components }</li>)) }
+                    { content.toolsAndFrameworks.map(components => { return <li>{ components }</li> }) }
                 </ul>
             </CardContent>
         </Card>
