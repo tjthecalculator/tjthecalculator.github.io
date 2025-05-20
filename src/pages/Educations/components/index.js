@@ -1,2 +1,2 @@
-export * from "./BootcampCard";
+export * from "./CertificationCard";
 export * from "./DegreeCard";

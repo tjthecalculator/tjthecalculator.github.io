@@ -1,4 +1,4 @@
-import { DegreeCard, BootcampCard } from "./components"
+import { DegreeCard, CertificationCard } from "./components"
 import { Tabs, TabsList, TabsTrigger, TabsContent } from "@/components/ui/tabs";
 
 export const Educations = () => {
@@ -22,7 +22,7 @@ export const Educations = () => {
         },
     ];
 
-    const bootcamp = [
+    const certification = [
         {
             bootcampName: "",
             bootcampSchool: "",
@@ -38,13 +38,13 @@ export const Educations = () => {
             <Tabs defaultValue="degrees">
                 <TabsList>
                     <TabsTrigger value="degrees">Degrees</TabsTrigger>
-                    <TabsTrigger value="bootcamps">Bootcamps</TabsTrigger>
+                    <TabsTrigger value="bootcamps">Certifications</TabsTrigger>
                 </TabsList>
                 <TabsContent value="degrees">
                     {degree.map((content) => (<DegreeCard content={ content }/>))}
                 </TabsContent>
                 <TabsContent value="bootcamps">
-                    {bootcamp.map((content) => (<BootcampCard content={ content }/>))}
+                    {certification.map((content) => (<CertificationCard content={ content }/>))}
                 </TabsContent>
             </Tabs>
         </div>

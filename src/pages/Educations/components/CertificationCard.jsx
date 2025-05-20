@@ -1,6 +1,6 @@
 import { Card, CardHeader, CardTitle, CardContent } from "@/components/ui/card";
 
-export const BootcampCard = ({ content }) => {
+export const CertificationCard = ({ content }) => {
     return (
         <Card>
             <CardHeader>
